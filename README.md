@@ -121,6 +121,44 @@ JWT_SECRET=<tu_secreto_jwt>
     }
     ```
 
+- **Crear Cita**
+  - **URL:** `/adoptionSystem/v1/appointment/createAppointment`
+  - **Método:** `POST`
+  - **Cuerpo:**
+    ```json
+    {
+      "date": "2023-10-15T10:00:00Z",
+      "pet": "string",
+      "user": "string"
+    }
+    ```
+
+1. **Actualizar Foto del Usuario**
+URL: /adoptionSystem/v1/user/updateProfilePicture/:iud
+Método: PATCH
+Cuerpo:
+{
+  "profilePicture": "string"
+}
+
+2. **Listar Citas**
+URL: /adoptionSystem/v1/appointment/:uid
+Método: GET
+
+3. **Actualizar Cita**
+Descripción: Implementar funcionalidad para actualizar una cita existente.
+URL: `/adoptionSystem/v1/appointment/updateAppointment/:uid"
+Método: POST
+Cuerpo:
+{
+  "date": "2023-11-15T10:00:00Z",
+  "pet": "string"
+}
+
+4. **Cancelar Cita**
+URL: `/adoptionSystem/v1/appointment/cancelAppointment/:uid
+Método: PATCH
+
 ## Funcionalidades Adicionales
 
 Las siguientes funcionalidades necesitan ser desarrolladas:
