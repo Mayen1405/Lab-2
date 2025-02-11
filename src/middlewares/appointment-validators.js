@@ -23,3 +23,10 @@ export const updateAppointmentValidator = [
     validarCampos,
     handleErrors
 ]
+
+export const deleteAppointmentValidator = [
+    param("uid").isMongoId().withMessage("No es un ID válido de MongoDB"),
+    param("uid").custom(userExists),
+    validarCampos,
+    handleErrors
+]
